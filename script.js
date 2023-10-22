@@ -381,6 +381,8 @@ function startTimer() {
 
 // function that must run when document loaded
 window.onload = function () {
+    showDialogClick('login');
+    setScoreboard();
     // assigne table to its value
     table = document.getElementById("puzzle-grid");
     // add ripple effect to all buttons in layout

@@ -235,7 +235,7 @@ td:nth-child(3n + 1) {
     color: #404040;
 }
 
-.dialog {
+.dialog, .login, .register {
     position: absolute;
     left: 0;
     top: 0;
@@ -247,7 +247,7 @@ td:nth-child(3n + 1) {
     transition: all 0.2s;
 }
 
-.dialog-content {
+.dialog-content, .login-content, .register-content {
     top: -200px;
     background: #fff;
     width: 90%;
@@ -260,14 +260,14 @@ td:nth-child(3n + 1) {
     transition: all 0.5s;
 }
 
-.dialog-header {
+.dialog-header, .login-header, .register-header {
     font-size: 24px;
     font-weight: bold;
     padding: 16px 32px;
     border-bottom: solid 1px #808080;
 }
 
-.dialog-body p {
+.dialog-body p, .login-body p, .register-body p {
     margin: 16px 0 4px 28px;
     color: gray;
 }
@@ -290,14 +290,14 @@ td:nth-child(3n + 1) {
     padding: 1.25em 0;
 }
 
-.dialog-footer {
+.dialog-footer, .login-footer, .register-footer {
     border-top: solid 1px #808080;
     margin-top: 24px;
     text-align: right;
     padding-right: 16px;
 }
 
-.dialog-btn {
+.dialog-btn, .login-btn, .register-btn {
     background: transparent;
     border: none;
     color: #003c8f;
@@ -307,4 +307,56 @@ td:nth-child(3n + 1) {
     outline: none;
     min-width: 96px;
     display: inline-block;
+}
+
+.login-body input, .register-body input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 4px;
+    width: 100%;
+    padding: 0 0 0 10px;
+    margin: 0;
+    color: #000000;
+    border: 1px solid #000000;
+    font-style: normal;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    background: none;
+}
+
+.scoreboard-header {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 24px;
+    border-bottom: solid 1px #808080;
+}
+
+.scoreboard-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.scoreboard-body th, .scoreboard-body td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+}
+
+.scoreboard-body th {
+    background-color: #333;
+    color: #fff;
+}
+
+.scoreboard-body tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.scoreboard-body tr:nth-child(odd) {
+    background-color: #fff;
 }

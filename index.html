@@ -73,7 +73,56 @@
         </div>
     </div>
 
-    <div class="body" id="sudoku">
+    <div id="login" class="login">
+        <div id="login-box" class="login-content">
+            <div class="login-header">Login</div>
+            <div class="login-body">
+                <form id="loginForm"></form>
+                    <div class="input-field" style="padding: 30px 30px 0px 30px">
+                        <input type="email" id="login-email" placeholder="Email">
+                    </div>
+                    <div class="input-field" style="padding: 30px 30px 10px 30px">
+                        <input type="password" id="login-password" placeholder="Password">
+                    </div>
+                </form>
+            </div>
+            <div class="login-footer">
+                <button onclick="hideDialogButtonClick('login'); showDialogClick('register');" ripple-color="#003c8f"
+                    class="button login-btn vertical-adjust">Register</button>
+                <button onclick="hideDialogButtonClick('login'); getLoginForm();" ripple-color="#202020"
+                    class="button login-btn vertical-adjust">Sign in</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="register" class="register">
+        <div id="register-box" class="register-content">
+            <div class="register-header">Register</div>
+            <div class="register-body">
+                <div class="input-field" style="padding: 30px 30px 0px 30px">
+                    <input type="text" id="register-nama" placeholder="Nama">
+                </div>
+                <div class="input-field" style="padding: 30px 30px 0px 30px">
+                    <input type="email" id="register-email" placeholder="Email">
+                </div>
+                <div class="input-field" style="padding: 30px 30px 10px 30px">
+                    <input type="password" id="register-password" placeholder="Password">
+                </div>
+            </div>
+            <div class="register-footer">
+                <button onclick="hideDialogButtonClick('register'); getRegisterForm();" ripple-color="#202020"
+                    class="button register-btn vertical-adjust">Register</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body" id="sudoku" style="margin-top: 6%;">
+        <div class="card game" style="width: 98%;">
+            <div class="scoreboard-header" id="welcome-message">Welcome, Human!</div>
+        </div>
+    </div>
+
+    <div class="body" id="sudoku" style="margin-top: 2.5%;">
         <div class="card game">
             <table id="puzzle-grid">
                 <tr>
@@ -430,6 +479,36 @@
         </div>
     </div>
 
+    <div class="body" id="sudoku" style="margin-top: 2.5%; margin-bottom: 2.5%;">
+        <div class="card game" style="width: 98%;">
+            <div class="scoreboard-header">Scoreboard</div>
+            <table class="scoreboard-body" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Player 1</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Player 2</td>
+                        <td>85</td>
+                    </tr>
+                    <tr>
+                        <td>Player 3</td>
+                        <td>70</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
     <script src="./script.js"></script>
+    <script src="./API.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
